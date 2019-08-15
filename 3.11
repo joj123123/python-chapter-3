@@ -1,0 +1,7 @@
+import turtle
+t = turtle.Turtle()
+t.shape('triangle')
+r = int(input('한 변의 길이를 입력하세요 :'))
+for i in range(5):
+    t.fd(r)
+    t.left(145)
