@@ -1,0 +1,30 @@
+import turtle
+t = turtle.Turtle()
+
+p1, p11 = input('첫번째 점을 입력하세요 : ').split(',')
+p1 = int(p1)
+p11 = int(p11)
+p2, p22 = input('두번째 점을 입력하세요 :').split(',')
+p2 = int(p2)
+p22 = int(p22)
+p3, p33 = input('세번째 점을 입력하세요 :').split(',')
+p3 = int(p3)
+p33 = int(p33)
+
+t.up()
+t.goto(p1,p11)
+t.down()
+t.write('p1({},{})'.format(p1,p11))
+t.goto(p2,p22)
+t.write('p2({},{})'.format(p2,p22))
+t.goto(p3,p33)
+t.write('p3({},{})'.format(p3,p33))
+t.goto(p1,p11)
+t.up()
+t.goto(-100,0)
+a = ((p2-p1)**2 + (p22-p11)**2)**0.5
+b = ((p3-p2)**2 + (p33-p22)**2)**0.5
+c = ((p3-p1)**2 + (p33-p11)**2)**0.5
+s = (a+b+c)/2
+S = (s*((s-a)*(s-b)*(s-c)))**0.5
+t.write('삼각형의 면적은 {}입니다.'.format(S))
