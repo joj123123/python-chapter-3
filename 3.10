@@ -1,0 +1,2 @@
+integer = input("정수를 입력")
+print(integer[::-1])
