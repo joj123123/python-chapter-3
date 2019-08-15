@@ -1,0 +1,14 @@
+import turtle
+t = turtle.Turtle()
+
+t.begin_fill()
+t.color('red')
+for i in range(6):
+    t.fd(50)
+    t.left(60)
+t.end_fill()
+t.up()
+t.goto(5,25)
+
+t.color('white')
+t.write('정지',font = ('맑은고딕',25))
