@@ -1,0 +1,17 @@
+name = input("사원의 이름을 입력:")
+time = int(input("주당 근무시간을 입력하세요:"))
+per_hour_salary = int(input("시간당 급여를 입력하세요:"))
+estimate_tax_rate = float(input("원천 징수세율을 입력하세요:"))
+region_tax_rate = float(input("지방세율을 입력하세요:"))
+total_salary = per_hour_salary*time
+estimate_tax= estimate_tax_rate * total_salary
+region_tax = total_salary*region_tax_rate
+print("사원이름:",name)
+print("주당 근무시간",time)
+print("임금:",per_hour_salary)
+print("총급여:",total_salary)
+print("공제:")
+print(" ","원천징수세",estimate_tax_rate*100,"%:",estimate_tax)
+print(" ","주민세", region_tax_rate*100,"%:",region_tax)
+print(" ","총공제:",estimate_tax + region_tax)
+print("공제 후 급여:",total_salary - estimate_tax - region_tax)
